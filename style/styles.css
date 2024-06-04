@@ -1,0 +1,211 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; 
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.title {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #00e676; /* Verde Neón */    
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.main-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.main-nav ul li a:hover {
+    color: #ff4081; /* Rosa Neón */
+}
+
+/* Estilos del menú desplegable */
+.profile-menu .dropdown,
+.friends-menu .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: 5px;
+}
+
+.profile-menu .dropdown.show,
+.friends-menu .dropdown.show {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown li {
+    width: 200px;
+}
+
+.dropdown a {
+    padding: 10px;
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: #ff4081; /* Rosa Neón */
+    color: #121212;
+}
+
+/* Estilos de la caja de perfil */
+.profile-box {
+    display: flex;
+    align-items: center;
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff4081; /* Sombra Rosa Neón */
+    margin-bottom: 20px;
+}
+
+.user-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #00e676; /* Borde Verde Neón */
+}
+
+.profile-details {
+    color: #ffffff;
+}
+
+.about-me {
+    margin-top: 10px;
+}
+
+.about-me h3 {
+    margin-bottom: 5px;
+}
+
+.about-me p {
+    margin: 0;
+}
+
+/* Additional styling for other sections */
+.gallery, .review, .recommendations, .ratings, .recommendations-others, .categories, .movies {
+    margin: 20px 0;
+}
+
+/* Estilos para las categorías y películas */
+.categories ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.categories li {
+    margin: 5px 0;
+}
+
+.categories a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.categories a:hover {
+    color: #ff4081; /* Rosa Neón */
+}
+
+.movies-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-item {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.movie-item img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #00e676; /* Borde Verde Neón */
+}
+
+/* Estilos para el footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #888888;
+}
+
+.categories ul li {
+    position: relative;
+}
+
+.categories ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.categories ul li:hover .dropdown {
+    display: block;
+}
+
+.categories ul li .dropdown li {
+    margin: 5px 0;
+}
+
+.categories ul li .dropdown a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.categories ul li .dropdown a:hover {
+    color: #ff4081; /* Rosa Neón */
+}

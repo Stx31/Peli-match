@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match-Movies</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="img/logo.png" alt="Match-Movies Logo" class="logo">
+            <h1 class="title">Match-Movies</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#main">Main</a></li>
+                    <li class="friends-menu">
+                        <a href="#friends">Amigos</a>
+                        <ul class="dropdown">
+                            <li><a href="#add-friends">Añadir amigos</a></li>
+                            <li><a href="#search-friends">Buscar amigos</a></li>
+                        </ul>
+                    </li>
+                    <li class="profile-menu">
+                        <a href="/profile.html">Mi Perfil</a>
+                        <ul class="dropdown">
+                            <li><a href="#settings">Ajustes</a></li>
+                            <li><a href="#edit-photo">Editar foto</a></li>
+                            <li><a href="#edit-name-id">Editar nombre/ID</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section class="categories">
+            <h2>Categorías</h2>
+            <ul id="categories-list">
+                <li class="category-menu">
+                    <a href="#" data-genre-id="10749">Amor</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Ver todo</a></li>
+                        <li><a href="#">Ver favoritos</a></li>
+                    </ul>
+                </li>
+                <li class="category-menu">
+                    <a href="#" data-genre-id="10751">Familia</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Ver todo</a></li>
+                        <li><a href="#">Ver favoritos</a></li>
+                    </ul>
+                </li>
+                <li class="category-menu">
+                    <a href="#" data-genre-id="27">Miedo</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Ver todo</a></li>
+                        <li><a href="#">Ver favoritos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="movies">
+            <h2>Películas</h2>
+            <div id="movies-list">
+               s
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2024 Match-Movies. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <script src="js/menu.js"></script>
+    <script src="js/movies.js"></script>
+</body>
+</html>
