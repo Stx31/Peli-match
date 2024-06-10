@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const categoriesList = document.getElementById('categories-list');
     const moviesList = document.getElementById('movies-list');
 
-    // Función para obtener y mostrar las categorías
+  
     function getCategories() {
         fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=es`)
             .then(response => response.json())
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    // Función para obtener y mostrar las películas por categoría
+    
     function getMoviesByCategory(categoryId) {
         fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${categoryId}&language=es`)
             .then(response => response.json())
@@ -40,13 +40,34 @@ document.addEventListener('DOMContentLoaded', function() {
                     const moviePoster = document.createElement('img');
                     moviePoster.src = `https://image.tmdb.org/t/p/w200${movie.poster_path}`;
                     moviePoster.alt = movie.title;
+
+                    // Botón de "Me gusta" para la película
+                    const likeButton = document.createElement('button');
+                    likeButton.textContent = 'Me gusta';
+                    likeButton.addEventListener('click', () => {
+                        likeMovie(movie.id);
+                    });
+
                     movieItem.appendChild(moviePoster);
                     movieItem.appendChild(movieTitle);
+                    movieItem.appendChild(likeButton);
                     moviesList.appendChild(movieItem);
                 });
             });
     }
 
-    // Inicializa la página obteniendo las categorías
+   
+    function likeMovie(movieId) {
+        let likedMovies = JSON.parse(localStorage.getItem('likedMovies')) || [];
+        if (!likedMovies.includes(movieId)) {
+            likedMovies.push(movieId);
+            localStorage.setItem('likedMovies', JSON.stringify(likedMovies));
+            alert('Has dado Me gusta a esta película');
+        } else {
+            alert('¡Ya has dado Me gusta a esta película antes!');
+        }
+    }
+
+    
     getCategories();
 });
