@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const categoriesList = document.getElementById('categories-list');
     const moviesList = document.getElementById('movies-list');
 
-  
     function getCategories() {
         fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=es`)
             .then(response => response.json())
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    
     function getMoviesByCategory(categoryId) {
         fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${categoryId}&language=es`)
             .then(response => response.json())
@@ -41,9 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     moviePoster.src = `https://image.tmdb.org/t/p/w200${movie.poster_path}`;
                     moviePoster.alt = movie.title;
 
-                    // Botón de "Me gusta" para la película
+                    
                     const likeButton = document.createElement('button');
-                    likeButton.textContent = 'Me gusta';
+                    likeButton.classList.add('like-button');
+                    likeButton.innerHTML = '<i class="fas fa-heart"></i>';
                     likeButton.addEventListener('click', () => {
                         likeMovie(movie.id);
                     });
@@ -56,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-   
     function likeMovie(movieId) {
         let likedMovies = JSON.parse(localStorage.getItem('likedMovies')) || [];
         if (!likedMovies.includes(movieId)) {
@@ -68,6 +66,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    
     getCategories();
 });

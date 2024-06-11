@@ -13,31 +13,19 @@
             <i class="material-icons lock">lock</i> Login
         </div>
 
-        <form action="/register" method="post">
+        <form id="login-form">
             <div class="input">
                 <div class="input-addon">
                     <i class="material-icons">email</i>
                 </div>
-                <input name="email" placeholder="Email" type="email" required class="validate" autocomplete="off">
-            </div>
-
-            <div class="input">
-                <div class="input-addon">
-                    <i class="material-icons">face</i>
-                </div>
-                <input name="username" placeholder="Username" type="text" required class="validate" autocomplete="off">
+                <input id="login-email" placeholder="Email" type="email" required class="validate" autocomplete="off">
             </div>
 
             <div class="input">
                 <div class="input-addon">
                     <i class="material-icons">vpn_key</i>
                 </div>
-                <input name="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
-            </div>
-
-            <div class="remember-me">
-                <input type="checkbox" required>
-                <span>I accept Terms of Service</span>
+                <input id="login-password" placeholder="Password" type="password" required class="validate" autocomplete="off">
             </div>
 
             <input type="submit" value="Login">
@@ -49,8 +37,10 @@
 
         <div class="register">
             Do you already have an account?
-            <a href="#"><button id="register-link">Log In here</button></a>
+            <a href="register.html"><button id="register-link">Register here</button></a>
         </div>
     </div>
+
+    <script src="js/auth.js"></script>
 </body>
 </html>

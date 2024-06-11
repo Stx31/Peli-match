@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Match-Movies</title>
     <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -13,16 +14,16 @@
             <h1 class="title">Match-Movies</h1>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#main">Main</a></li>
+                    <li><a href="main.html">Main</a></li>
                     <li class="friends-menu">
-                        <a href="#friends">Amigos</a>
+                        <a href="amigos.html">Amigos</a>
                         <ul class="dropdown">
                             <li><a href="#add-friends">Añadir amigos</a></li>
                             <li><a href="#search-friends">Buscar amigos</a></li>
                         </ul>
                     </li>
                     <li class="profile-menu">
-                        <a href="/profile.html">Mi Perfil</a>
+                        <a href="profile.html">Mi Perfil</a>
                         <ul class="dropdown">
                             <li><a href="#settings">Ajustes</a></li>
                             <li><a href="#edit-photo">Editar foto</a></li>
@@ -34,13 +35,11 @@
         </header>
         <section class="categories">
             <h2>Categorías</h2>
-            <ul id="categories-list">  </ul>
+            <ul id="categories-list"></ul>
         </section>
         <section class="movies">
             <h2>Películas</h2>
-            <div id="movies-list">
-                <!
-            </div>
+            <div id="movies-list"></div>
         </section>
         <section class="comments">
             <h2>Comentarios y Calificaciones</h2>
@@ -51,9 +50,8 @@
                 <input type="number" id="rating" name="rating" min="1" max="5">
                 <button type="submit">Enviar</button>
             </form>
-            <div id="comments-list">
-               
-            </div> 
+            <div id="comments-list"></div>
+            <button id="clear-comments">Borrar Comentarios</button>
         </section>
         <footer>
             <p>&copy; 2024 Match-Movies. Todos los derechos reservados.</p>
